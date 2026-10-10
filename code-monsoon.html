@@ -9,21 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Hind:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style.css">
   
-  <!-- Offline-first Skulpt runtime with fallback -->
-  <script src="codes/vendor/skulpt.min.js"></script>
-  <script src="codes/vendor/skulpt-stdlib.js"></script>
+  <!-- Local offline Skulpt runtime with automatic CDN fallback -->
+  <script src="vendor/skulpt.min.js"></script>
+  <script src="vendor/skulpt-stdlib.js"></script>
   <script>
-    if (typeof Sk === 'undefined') {
-      document.write('<script src="vendor/skulpt.min.js"><\\/script>');
-      document.write('<script src="vendor/skulpt-stdlib.js"><\\/script>');
-    }
     if (typeof Sk === 'undefined') {
       document.write('<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"><\\/script>');
       document.write('<script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"><\\/script>');
     }
   </script>
-  <link rel="stylesheet" href="codes/style.css">
 </head>
 <body>
   <canvas id="rain" aria-hidden="true"></canvas>
@@ -52,7 +48,7 @@
 
   <main class="wrap" id="app"></main>
 
-  <script src="codes/story_data.js"></script>
-  <script src="codes/game.js"></script>
+  <script src="story_data.js"></script>
+  <script src="game.js"></script>
 </body>
 </html>
