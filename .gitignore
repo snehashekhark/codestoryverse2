@@ -1,0 +1,7 @@
+# Netlify cache and state
+.netlify/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.tmp
